@@ -28,3 +28,13 @@
 # <class '__main__.Person'>
 
 # ```
+
+
+
+
+# Person 클래스 만들기
+class Person:
+    # pass
+    pass
+# 출력
+print(Person)
