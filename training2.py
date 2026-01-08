@@ -30,3 +30,17 @@
 # <class '__main__.Person'>
 
 # ```
+
+
+# Person 클래스 생성
+# 생성자 포함
+
+class Person:
+    # 생성자
+    # name, age 받음
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+# Person 출력
+print(Person)
