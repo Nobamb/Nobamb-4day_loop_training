@@ -39,3 +39,23 @@
 
 
 
+# Person 클래스 생성
+
+# name, age받음
+class Person:
+    def __init__(self, name, age):
+        self.name =name
+        self.age = age
+
+# person받음, 공욱재 26
+person = Person("공욱재",26)
+
+# 변경
+# 공미남 27
+
+person.name = "공미남"
+person.age = 27
+
+# 출력
+print(person.name)
+print(person.age)
