@@ -35,3 +35,25 @@
 # []
 
 # ```
+
+
+# Person 클래스 생성
+# name, age
+class Person:
+    def __init__(self, name, age):
+        self.name =name
+        self.age =age
+        
+
+# PersonManage 클래스 생성
+# 생성자는 배열
+class PersonManage:
+    def __init__(self):
+        self.manage = []
+        
+        
+# PersonManage 클래스 받음
+manager = PersonManage()
+
+# 출력
+print(manager.manage)
