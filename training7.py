@@ -38,3 +38,24 @@
 # 공추남 28
 
 # ```
+
+
+# Person 생성
+# name, age 받음
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+# 배열 지정
+members = []
+
+# members 배열에 person 추가
+members.append(Person("공욱재",26))
+members.append(Person("공미남",27))
+members.append(Person("공추남",28))
+
+# members 전부 출력
+# name, age모두
+for member in members:
+    print(member.name, member.age)
