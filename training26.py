@@ -167,8 +167,57 @@ class PersonManager:
     # 개수를 반환
     def get_count(self):
         return len(self.manage)
+
+
+
+# 전체 목록 보여줌
+def show_menu():
+    print("1. 추가")
+    print("2. 전체조회")
+    print("3. 수정")
+    print("4. 삭제")
+    print("5. 종료")
     
-    
-    
-# PersonManger 생성
-manager = PersonManager()
+
+
+# main 함수 지정
+def main():
+    # PersonManger 생성
+    manager = PersonManager()
+
+    while True:
+        # 목록 보여줌
+        show_menu()
+        # menu 받음
+        menu = input("메뉴를 받으시오")
+        # 1,2,3,4,5 받음
+        # 1일때 name, age받고
+        # add를 통해 추가
+        if menu == "1":
+            name = input("이름")
+            age = int(input("나이"))
+            manager.add(name, age)
+            
+        # menu가 2일때 전체조회
+        if menu == "2":
+            manager.read_all()
+            
+        # menu가 3일 때 수정
+        if menu == "3":
+            # index 찾기
+            idx = int(input("인덱스"))
+            # new_age 지정
+            new_age = int(input("새로운 나이"))
+            manager.update(idx, new_age)
+        # menu가 4일 때 삭제
+        if menu == "4":
+            # 삭제할 인덱스 받기
+            idx= int(input("인덱스 지정"))
+            manager.delete(idx)
+        # 5면 종료
+        if menu == "5":
+            break
+        
+        
+# main 실행
+main()
