@@ -121,3 +121,54 @@
 # 5. 종료
 
 # ```
+
+
+
+# Person 클래스 생성
+# name, age 생성자
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+        
+# PersonManager 클래스 생성
+class PersonManager:
+    
+    def __init__(self):
+        # 생성자로 배열받음
+        self.manage = []
+        
+    # 추가(person 생성자를 배열에 추가)
+    def add(self, name, age):
+        # person 생성
+        person = Person(name, age)
+        # 배열에 값 추가
+        self.manage.append(person)
+        
+    # 모두 읽기
+    # manage에 대해 인덱스, 이름, 나이까지
+    def read_all(self):
+        for idx, member in enumerate(self.manage):
+            print(idx, member.name, member.age)
+            
+    # update
+    # 특정 인덱스의 나이 변경
+    def update(self, idx, new_age):
+        self.manage[idx].age = new_age
+        
+    # delete
+    # 특정 인덱스의 값 제거
+    def delete(self, idx):
+        # manage의 특정 인덱스의 값 삭제
+        self.manage.pop(idx)
+        
+    # get_count
+    # 개수를 반환
+    def get_count(self):
+        return len(self.manage)
+    
+    
+    
+# PersonManger 생성
+manager = PersonManager()
